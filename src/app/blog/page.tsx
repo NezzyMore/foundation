@@ -1,0 +1,26 @@
+import React from "react";
+import BlogItem from "../components/Home/Blog/BlogItem";
+import PageHeader from "../components/Layout/PageHeader/PageHeader";
+import { BlogPosts } from "@/lib/data/blog";
+
+const BlogPage = () => {
+    return (
+        <>
+            <PageHeader title="Blog" subtitle="Latest news and updates" />
+            <section>
+                <div className="container mx-auto grid grid-cols-4 gap-4">
+                    {BlogPosts.map((item, index) => (
+                        <BlogItem
+                            title={item.title}
+                            description={item.description}
+                            imageUrl={item.imageUrl}
+                            key={index}
+                        />
+                    ))}
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default BlogPage;
