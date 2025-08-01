@@ -1,29 +1,12 @@
 import React from "react";
 import PageHeader from "../components/Layout/PageHeader/PageHeader"; // Assuming this component exists
-import { Card } from "@/components/ui/card"; // Assuming this component exists
 import Image from "next/image"; // Import the Next.js Image component
 import { Separator } from "@/components/ui/separator";
 import SectionHeading from "@/components/SectionHeading";
 
 const AboutPage = () => {
-    // Helper components for consistent styling
-    const Heading = ({ children }: { children: React.ReactNode }) => (
-        <h2 className="text-3xl font-bold  mb-4 sm:text-4xl text-center md:text-left">
-            {children}
-        </h2>
-    );
-    const SubHeading = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-2xl font-semibold text-gray-700 mb-3 mt-6 sm:text-2xl text-center md:text-left">
-            {children}
-        </h3>
-    );
     const Paragraph = ({ children }: { children: React.ReactNode }) => (
         <p className="text-base md:text-lg leading-relaxed mb-4 ">{children}</p>
-    );
-    const Blockquote = ({ children }: { children: React.ReactNode }) => (
-        <blockquote className="border-l-4  border-primary text-muted-foreground pl-4 py-2 italic  my-4 bg-muted rounded-xl">
-            {children}
-        </blockquote>
     );
 
     // New reusable ContentSection component

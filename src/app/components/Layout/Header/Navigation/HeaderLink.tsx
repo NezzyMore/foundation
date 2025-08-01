@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import { HeaderItem } from "../../../../types/menu";
 import { usePathname } from "next/navigation";
@@ -7,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
-    const [submenuOpen, setSubmenuOpen] = useState(false);
     const path = usePathname();
 
     return (
