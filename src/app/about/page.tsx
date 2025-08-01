@@ -3,11 +3,12 @@ import PageHeader from "../components/Layout/PageHeader/PageHeader"; // Assuming
 import { Card } from "@/components/ui/card"; // Assuming this component exists
 import Image from "next/image"; // Import the Next.js Image component
 import { Separator } from "@/components/ui/separator";
+import SectionHeading from "@/components/SectionHeading";
 
 const AboutPage = () => {
     // Helper components for consistent styling
     const Heading = ({ children }: { children: React.ReactNode }) => (
-        <h2 className="text-3xl font-bold text-gray-800 mb-4 sm:text-4xl text-center md:text-left">
+        <h2 className="text-3xl font-bold  mb-4 sm:text-4xl text-center md:text-left">
             {children}
         </h2>
     );
@@ -17,10 +18,10 @@ const AboutPage = () => {
         </h3>
     );
     const Paragraph = ({ children }: { children: React.ReactNode }) => (
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">{children}</p>
+        <p className="text-base md:text-lg leading-relaxed mb-4 ">{children}</p>
     );
     const Blockquote = ({ children }: { children: React.ReactNode }) => (
-        <blockquote className="border-l-4 border-emerald-500 pl-4 py-2 italic text-gray-600 my-4 bg-emerald-50 rounded-r-md">
+        <blockquote className="border-l-4  border-primary text-muted-foreground pl-4 py-2 italic  my-4 bg-muted rounded-xl">
             {children}
         </blockquote>
     );
@@ -57,8 +58,13 @@ const AboutPage = () => {
         );
 
         return (
-            <div className="">
-                <Heading>{heading}</Heading>
+            <div className="py-10">
+                <SectionHeading
+                    title={heading}
+                    className="mb-8 md:text-4xl"
+                    headingClassName="md:text-4xl"
+                />
+
                 <div
                     className={`flex flex-col gap-8 ${
                         imagePosition === "left"
@@ -101,7 +107,7 @@ const AboutPage = () => {
                         Our foundation is built upon four core pillars, guiding
                         our efforts to create lasting positive change:
                     </Paragraph>
-                    <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 pl-4">
+                    <ul className="list-disc list-inside text-base md:text-lg space-y-2 mb-4">
                         <li>
                             <strong>Education:</strong> Empowering individuals
                             through access to learning opportunities.
@@ -131,14 +137,12 @@ const AboutPage = () => {
                 {/* Our History Section */}
                 <Separator className="my-8" />
                 <div className="space-y-8">
-                    <div>
-                        <Heading>Our History</Heading>
-                        <Paragraph>
-                            The journey of the Teresia Waihuini Foundation is
+                    <SectionHeading
+                        title="Our History"
+                        subtitle="The journey of the Teresia Waihuini Foundation is
                             marked by consistent dedication and impactful
-                            activities:
-                        </Paragraph>
-                    </div>
+                            activities:"
+                    />
 
                     {/* Launch of TWF - August 2021 using ContentSection */}
                     <ContentSection
@@ -157,7 +161,7 @@ const AboutPage = () => {
                             the foundation's initial focus on Education,
                             Environment, and Leadership & Development.
                         </Paragraph>
-                        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 pl-4 mb-4">
+                        <ul className="list-disc list-inside text-base md:text-lg space-y-2  mb-4">
                             <li>
                                 <strong>Education Pillar Launched:</strong> Two
                                 four-year full scholarships were announced for a
@@ -194,7 +198,7 @@ const AboutPage = () => {
                             actively participated in local parish church
                             activities. Our support included:
                         </Paragraph>
-                        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 pl-4 mb-4">
+                        <ul className="list-disc list-inside text-base md:text-lg space-y-2  mb-4">
                             <li>
                                 <strong>Community Development:</strong>{" "}
                                 Contributing to the rehabilitation of the Vicar
@@ -239,7 +243,7 @@ const AboutPage = () => {
                             annual engagement with the local churches' women's
                             group during their 'Talanda' (Talent) Sunday.
                         </Paragraph>
-                        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 pl-4 mb-4">
+                        <ul className="list-disc list-inside text-base md:text-lg space-y-2  mb-4">
                             <li>
                                 <strong>Church and Community Support:</strong>{" "}
                                 Members of the foundation joined St. Peter's
@@ -268,7 +272,7 @@ const AboutPage = () => {
                             of our fourth pillar:{" "}
                             <strong>Healthcare and Community Wellbeing</strong>.
                         </Paragraph>
-                        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 pl-4">
+                        <ul className="list-disc list-inside text-base md:text-lg space-y-2 ">
                             <li>
                                 <strong>Healthcare Initiative:</strong>{" "}
                                 Foundation members visited Ms. Eunice Kaguma, a
@@ -283,101 +287,6 @@ const AboutPage = () => {
                         </ul>
                     </ContentSection>
                 </div>
-
-                {/* Key Testimonials Section (remains separate as it doesn't fit the image pattern) */}
-                <Card className="p-6 md:p-8 shadow-lg rounded-xl bg-white">
-                    <Heading>Key Testimonials</Heading>
-                    <Paragraph>
-                        Throughout our journey, the Teresia Waihuini Foundation
-                        has been blessed with heartfelt appreciation from those
-                        we've touched:
-                    </Paragraph>
-
-                    <Blockquote>
-                        &ldquo;…. Dear God, we come to you full of gratitude for
-                        the life that your servant Teresia lived, life dedicated
-                        to serving you and your people. Thank you for the vision
-                        and burden you have placed in her family to keep her
-                        legacy alive. May you grant them all they need to keep
-                        serving you…&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Bishop Dr. Timothy Gichere (2021 Launch)
-                        </span>
-                    </Blockquote>
-
-                    <Blockquote>
-                        &ldquo;…mwathani cuthiriria woone wendo uria family ya
-                        ndungata yaku monanitie, thie na mbere kumarathima, reke
-                        mwathani ngooro ciao ciikarage na umiriria waaku makiria
-                        riria manyitwo ni ihooru ria mami wao. Reke maikarage
-                        makwirigiriire hiingo ciothe…&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Rev. Filex Mwangi (2021 Launch)
-                        </span>
-                    </Blockquote>
-
-                    <Blockquote>
-                        &ldquo;….. may the almighty keep blessing the family of
-                        the late Teresia, for you have truly lived up to her
-                        aspirations, that of serving God and His people. A task
-                        you have taken to heart and with admirable zeal. May you
-                        truly never lack in all the good things. Mungu abariki
-                        nyinyi sana…&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Local Parish Vicar (2022 Anniversary)
-                        </span>
-                    </Blockquote>
-
-                    <Blockquote>
-                        &ldquo;….. we came to meet you today to share our
-                        deepest appreciation, for supporting our daughter’s
-                        education. Without your help and that of God, we do not
-                        know where we would have turned to. In honour of what
-                        you have done, xxx promises never to let you down… Ngai
-                        amurathime&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Mrs. Mwangi, Scholarship Beneficiary Parent (2022
-                            Anniversary)
-                        </span>
-                    </Blockquote>
-
-                    <Blockquote>
-                        &ldquo;… God bless you the children of Waihuini, for you
-                        have chosen to keep her legacy going on. That you
-                        continue to care for the less fortunate even when you
-                        need not to. You have taken it as your burden to do the
-                        things you have been doing in her honour. We as Kaguma’s
-                        family are eternally grateful and pray to the almighty
-                        to keep you together and grow your work as a
-                        foundation…&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Madam Mwanjiku Kaguma, Relative of Healthcare
-                            Beneficiary (2024 Anniversary)
-                        </span>
-                    </Blockquote>
-
-                    <Blockquote>
-                        &ldquo;…mwathani amurathime na amuongerere matuku maingi
-                        ciana ici cia Waihuini, na amuongerere indo nyingi cia
-                        guthii na mebere gutuga andu a Ngai…..&rdquo;
-                        <br />
-                        <br />
-                        <span className="font-semibold text-gray-700">
-                            - Mrs. Eunice Kaguma, Healthcare Beneficiary (2024
-                            Anniversary)
-                        </span>
-                    </Blockquote>
-                </Card>
             </section>
         </>
     );

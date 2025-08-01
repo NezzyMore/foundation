@@ -44,8 +44,6 @@ const GalleryItem = ({
                     layout // Enables smooth layout transitions (position changes in grid)
                     whileHover={{
                         scale: 1.03,
-                        boxShadow:
-                            "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
                     }} // Hover effect
                     transition={{ type: "spring", stiffness: 300, damping: 20 }} // Smooth transition for entry/exit/hover
                     className="group transition-all ease-linear cursor-pointer"

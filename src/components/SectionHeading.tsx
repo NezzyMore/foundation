@@ -5,16 +5,27 @@ const SectionHeading = ({
     title,
     subtitle,
     className,
+    headingClassName,
 }: {
     title: string;
     subtitle?: string;
     className?: string;
+    headingClassName?: string;
 }) => {
     return (
         <div className={cn("mb-6", className)}>
-            <h1 className="text-5xl font-semibold">{title}</h1>
+            <h1
+                className={cn(
+                    "text-4xl md:text-5xl font-bold",
+                    headingClassName
+                )}
+            >
+                {title}
+            </h1>
             {subtitle && (
-                <p className="text-muted-foreground text-xl mt-2">{subtitle}</p>
+                <p className="text-muted-foreground text-base md:text-xl mt-2">
+                    {subtitle}
+                </p>
             )}
         </div>
     );

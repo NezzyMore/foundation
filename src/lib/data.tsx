@@ -166,20 +166,20 @@ const FooterLinkData: FooterLinkType[] = [
 export const Services = [
     {
         imgSrc: <UsersIcon />,
-        country: "Leadership & Peace Promotion",
+        country: "Our Mission",
         paragraph:
-            "We support peace and local leadership to promote community harmony, inspired by Teresia’s legacy.",
+            "To collaboratively change lives through education, leadership development and environmental sustainability.",
     },
     {
         imgSrc: <TreePalm />,
-        country: "Environment Conservation and Sustainability",
+        country: "Our Vision",
         paragraph:
-            "We promote eco-friendly practices and income-generating projects to support sustainable communities.",
+            "To be a trusted compassionate partner for our community in areas of education, leadership and environmental sustainability.",
     },
     {
         imgSrc: <BookOpen />,
-        country: "Education",
+        country: "Values",
         paragraph:
-            "We help talented children from underprivileged backgrounds through both academic and non-academic support.",
+            "Teresia Waihuini Foundation is built from the following core values; Compassion, Leadership, Integrity.",
     },
 ];

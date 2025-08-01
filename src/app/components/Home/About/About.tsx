@@ -1,45 +1,43 @@
+import Container from "@/components/container";
+import SectionHeading from "@/components/SectionHeading";
 import Image from "next/image";
 
 const Vision = () => {
     return (
-        <section className="-mt-10 md:mt-0">
-            <div className="relative z-1">
-                <div className="container mx-auto bg-primary rounded-2xl">
+        <section className="-mt-10 md:mt-0 py-4">
+            <div className="relative z-1 mx-2 md:mx-0">
+                <Container className="bg-primary rounded-2xl">
                     <div className="grid grid-cols-1 gap-y-10 gap-x-6 lg:grid-cols-2 xl:gap-x-8">
-                        {/* COLUMN-1 */}
-                        <div className="hidden lg:block">
-                            <div className="float-right pt-20 relative">
+                        {/* COLUMN-1: Image section, now visible on all screens */}
+                        <div className=" relative flex justify-center ">
+                            {/* The container for the main image must be relative and have defined dimensions. */}
+                            {/* `w-full` and `aspect-square` define the size, and `relative` allows the `fill` prop to work. */}
+                            <div className="relative w-full aspect-square">
                                 <Image
-                                    src={"/images/newsletter/bgImage.png"}
+                                    src={"/images/banner/shosho.png"}
                                     alt="bgimg"
-                                    width={588}
-                                    height={334}
+                                    // The `fill` prop makes the image occupy the full dimensions of its parent container.
+                                    fill
+                                    // `object-cover` ensures the image covers the container without being stretched.
+                                    className="rounded-2xl object-cover"
                                 />
-                                <div className="absolute top-10 right-0">
-                                    <Image
-                                        src={"/images/newsletter/leaf.svg"}
-                                        alt="leafimg"
-                                        width={81}
-                                        height={81}
-                                    />
-                                </div>
-                                <div className="absolute bottom-8 left-2">
-                                    <Image
-                                        src={"/images/newsletter/circel.svg"}
-                                        alt="circleimg"
-                                        width={30}
-                                        height={30}
-                                    />
-                                </div>
+                            </div>
+                            {/* Decorative leaf image, positioned relative to the parent container */}
+                            <div className="absolute top-10 right-0">
+                                <Image
+                                    src={"/images/newsletter/leaf.svg"}
+                                    alt="leafimg"
+                                    width={81}
+                                    height={81}
+                                />
                             </div>
                         </div>
 
-                        {/* COLUMN-2 */}
-                        <div className="p-10 flex flex-col justify-center text-white">
-                            <h3 className="mb-3 text-6xl font-semibold text-white">
-                                About Us
-                            </h3>
-                            <p className="text-base font-normal text-offwhite">
+                        {/* COLUMN-2: Text content */}
+                        <div className=" flex flex-col justify-center text-white">
+                            <SectionHeading title="About Us" />
+
+                            <p className="text-base font-normal text-offwhite text-justify">
                                 Teresia Waihuini Foundation – TWF is established
                                 to carry on with the dreams, aspirations and
                                 life ideals of the late Teresia Waihuini Mwangi,
@@ -49,7 +47,7 @@ const Vision = () => {
                                 family and friends established the foundation to
                                 coordinate activities to support her community.
                             </p>
-                            <p className="text-base font-normal mb-7 text-offwhite">
+                            <p className="text-base font-normal mb-7 text-offwhite text-justify">
                                 In staying with her lifelong activities of
                                 community engagement through meaningful
                                 community interventions, the family and friends
@@ -58,7 +56,7 @@ const Vision = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </Container>
             </div>
         </section>
     );

@@ -24,7 +24,7 @@ const ReviewCard = ({
         <div>
             <Card>
                 <CardContent>
-                    <CardDescription className="font-normal text-foreground">
+                    <CardDescription className="font-normal text-muted-foreground">
                         {review}
                     </CardDescription>
                 </CardContent>

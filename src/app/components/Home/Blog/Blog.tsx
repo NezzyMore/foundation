@@ -2,11 +2,12 @@ import React from "react";
 import BlogItem from "./BlogItem";
 import { BlogPosts } from "@/lib/data/blog";
 import SectionHeading from "@/components/SectionHeading";
+import Container from "@/components/container";
 
 const Blog = () => {
     return (
         <section className="py-10">
-            <div className="container mx-auto">
+            <Container className="">
                 <SectionHeading
                     title="From our Blog"
                     subtitle="Stories of change, impact, and hope from our work on the ground."
@@ -22,7 +23,7 @@ const Blog = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 };

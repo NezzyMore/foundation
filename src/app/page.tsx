@@ -5,6 +5,8 @@ import About from "./components/Home/About/About";
 import Blog from "./components/Home/Blog/Blog";
 import Review from "./components/Home/Review";
 import CtaSection from "./components/Home/cta-section";
+import WhatWeDo from "./components/Home/WhatWeDo/WhatWeDo";
+import VideoSection from "./components/Home/VideoSection/VideoSection";
 
 export const metadata: Metadata = {
     title: "TWS",
@@ -14,11 +16,15 @@ export default function Home() {
     return (
         <main>
             <Hero />
-            <About />
             <Service />
-            <CtaSection />
-            <Blog />
+            <About />
+            <WhatWeDo />
+            <VideoSection />
+
             <Review />
+            <CtaSection />
+
+            <Blog />
         </main>
     );
 }

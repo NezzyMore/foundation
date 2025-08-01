@@ -5,9 +5,9 @@ import { BlogPosts } from "@/lib/data/blog";
 
 const BlogPage = () => {
     return (
-        <>
+        <section>
             <PageHeader title="Blog" subtitle="Latest news and updates" />
-            <section>
+            <div className="py-14">
                 <div className="container mx-auto grid grid-cols-4 gap-4">
                     {BlogPosts.map((item, index) => (
                         <BlogItem
@@ -18,8 +18,8 @@ const BlogPage = () => {
                         />
                     ))}
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

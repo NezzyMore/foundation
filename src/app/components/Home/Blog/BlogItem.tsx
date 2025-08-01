@@ -23,9 +23,9 @@ const BlogItem = ({
 }) => {
     return (
         <Link href={`/blog/${slugify(title)}`}>
-            <Card className="group shadow-none hover:shadow-xl transition-all ease-linear">
+            <Card className="group shadow-none hover:shadow-xl transition-all ease-linear p-2">
                 {/* imae section */}
-                <CardHeader className="mb-0">
+                <CardHeader className="mb-0 px-0">
                     <Card className="overflow-hidden border-0 shadow-lg py-0">
                         <AspectRatio ratio={1} className="bg-muted">
                             <Image
@@ -42,7 +42,7 @@ const BlogItem = ({
                     </div>
                 </CardHeader>
 
-                <CardContent className="-mt-4">
+                <CardContent className="-mt-4 px-0">
                     <CardTitle className="text-base md:text-lg group-hover:text-primary">
                         {title}
                     </CardTitle>

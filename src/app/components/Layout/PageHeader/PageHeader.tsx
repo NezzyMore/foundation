@@ -1,3 +1,4 @@
+import Container from "@/components/container";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -16,13 +17,15 @@ const PageHeader = ({
     return (
         <section
             className={cn(
-                !image && "h-[50vh]",
-                " py-10   flex flex-col items-center justify-center bg-muted"
+                "min-h-[50vh]",
+                " py-20   flex flex-col items-center justify-center bg-muted"
             )}
         >
-            <div className="container mx-auto flex justify-between items-center">
+            <Container className=" flex justify-between items-center">
                 <div>
-                    <h1 className="text-5xl font-semibold">{title}</h1>
+                    <h1 className="text-3xl md:text-5xl font-semibold">
+                        {title}
+                    </h1>
                     {subtitle && (
                         <p className="text-muted-foreground text-xl mt-2">
                             {subtitle}
@@ -43,7 +46,7 @@ const PageHeader = ({
                         </AspectRatio>
                     </Card>
                 )}
-            </div>
+            </Container>
         </section>
     );
 };

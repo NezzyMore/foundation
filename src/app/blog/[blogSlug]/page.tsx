@@ -17,13 +17,13 @@ export async function generateStaticParams() {
 
 // BlogPostPage is now an async Server Component to fetch data directly
 interface BlogPostPageProps {
-    params: {
+    params: Promise<{
         blogSlug: string;
-    };
+    }>;
 }
 
 const BlogPostPage = async ({ params }: BlogPostPageProps) => {
-    const { blogSlug } = params;
+    const { blogSlug } = await params;
 
     // Fetch the appropriate blog post based on the slug
     const post = BlogPosts.find((p) => slugify(p.title) === blogSlug);

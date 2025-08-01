@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "../components/Layout/PageHeader/PageHeader";
 import GalleryItem from "../components/GalleryItem/GalleryItem";
 import { TeamMembers } from "@/lib/data/team";
+import Container from "@/components/container";
 
 const TeamPage = () => {
     return (
@@ -11,7 +12,7 @@ const TeamPage = () => {
                 subtitle="Meet the faces making this possible"
             />
 
-            <div className="container mx-auto grid md:grid-cols-4 lg:grid-cols-4 gap-4">
+            <Container className=" grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 py-14">
                 {TeamMembers.map((item, index) => (
                     <GalleryItem
                         imageUrl={item.imageUrl}
@@ -21,7 +22,7 @@ const TeamPage = () => {
                         key={index}
                     />
                 ))}
-            </div>
+            </Container>
         </div>
     );
 };
