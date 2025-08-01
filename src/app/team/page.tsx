@@ -12,7 +12,7 @@ const TeamPage = () => {
                 subtitle="Meet the faces making this possible"
             />
 
-            <Container className=" grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 py-14">
+            <Container className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-14">
                 {TeamMembers.map((item, index) => (
                     <GalleryItem
                         imageUrl={item.imageUrl}

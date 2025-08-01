@@ -2,7 +2,7 @@ const Hero = () => {
     return (
         <section
             className="relative min-h-screen flex items-center bg-cover bg-fixed bg-center"
-            style={{ backgroundImage: "url(/images/banner/shosho.png)" }}
+            style={{ backgroundImage: "url(/images/banner/home-hero-2.jpg)" }}
         >
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative container mx-auto px-4 py-20">

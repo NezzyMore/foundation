@@ -43,7 +43,7 @@ const BlogItem = ({
                 </CardHeader>
 
                 <CardContent className="-mt-4 px-0">
-                    <CardTitle className="text-base md:text-lg group-hover:text-primary">
+                    <CardTitle className="text-base md:text-lg group-hover:text-primary line-clamp-2">
                         {title}
                     </CardTitle>
                     <CardDescription className="mt-1 truncate">

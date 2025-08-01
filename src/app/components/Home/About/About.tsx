@@ -14,7 +14,7 @@ const Vision = () => {
                             {/* `w-full` and `aspect-square` define the size, and `relative` allows the `fill` prop to work. */}
                             <div className="relative w-full aspect-square">
                                 <Image
-                                    src={"/images/banner/shosho.png"}
+                                    src={"/images/shosho.jpg"}
                                     alt="bgimg"
                                     // The `fill` prop makes the image occupy the full dimensions of its parent container.
                                     fill

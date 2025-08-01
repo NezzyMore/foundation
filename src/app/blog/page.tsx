@@ -8,7 +8,7 @@ const BlogPage = () => {
         <section>
             <PageHeader title="Blog" subtitle="Latest news and updates" />
             <div className="py-14">
-                <div className="container mx-auto grid grid-cols-4 gap-4">
+                <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {BlogPosts.map((item, index) => (
                         <BlogItem
                             title={item.title}

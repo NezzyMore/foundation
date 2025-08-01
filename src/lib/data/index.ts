@@ -5,3 +5,4 @@ export * from "./header";
 export * from "./review";
 export * from "./team";
 export * from "./services";
+export * from "./what-we-do";
